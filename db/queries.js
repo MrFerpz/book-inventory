@@ -48,6 +48,9 @@ async function updateBook(id, title, author, release_date, genre) {
 async function genreFilter(genre) {
     const response = await pool.query("SELECT * FROM books WHERE LOWER(genre) = LOWER($1)", [genre]);
     console.log(response.rows);
+    if (response.rows[1] === undefined) {
+        return null
+    }
     return response.rows;
 }
 
