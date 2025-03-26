@@ -47,8 +47,15 @@ async function updateBookPost(req, res) {
     res.redirect("/books");
 }
 
-function categoryPageGet(req, res) {
-    res.render("categories")
+function genrePageGet(req, res) {
+    res.render("genres")
+}
+
+async function individualGenrePageGet(req, res) {
+    const genre = req.params.genre
+    console.log(genre);
+    const booksInGenre = await db.genreFilter(genre);
+    res.render("genrePage", {books: booksInGenre});
 }
 
 module.exports = {
@@ -59,5 +66,6 @@ module.exports = {
     deleteBookPost,
     updateBookPageGet,
     updateBookPost,
-    categoryPageGet
+    genrePageGet,
+    individualGenrePageGet
 }

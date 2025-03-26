@@ -1,3 +1,4 @@
+require('dotenv').config();
 const pool = require('./pool');
 
 // books: id, title, author, release_date, genre
@@ -14,6 +15,7 @@ const pool = require('./pool');
 
 async function showBooks() {
     const response = await pool.query("SELECT * FROM books;");
+    console.log(response.rows);
     return response.rows;
 }
 
@@ -44,7 +46,8 @@ async function updateBook(id, title, author, release_date, genre) {
 }
 
 async function genreFilter(genre) {
-    const response = await pool.query("SELECT * FROM books WHERE genre = $1", [genre])
+    const response = await pool.query("SELECT * FROM books WHERE LOWER(genre) = LOWER($1)", [genre]);
+    console.log(response.rows);
     return response.rows;
 }
 
@@ -57,3 +60,4 @@ module.exports = {
     genreFilter
 }
 
+showBooks();
