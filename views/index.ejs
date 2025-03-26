@@ -12,12 +12,28 @@
         <a href="/">Home</a>
         <a href="/books">Books</a>
         <a href="/genres">Genres</a>
-        <form method="get" action="/search/">
-            <label for="search">Search a book: </label>
+        <form class="search-form" method="get" action="/search/">
+            <label for="search">BOOK SEARCH</label>
             <input name="search" id="search" type="text">
-            <button type="submit">Go</button>
+            <button class="search-button" type="submit">Go</button>
         </form>
     </div>
-    <div>Hello there!</div>
+    <div class="separator"></div>
+    <div class="pre-text-container">
+        <div>Welcome to your bookstore's <b>inventory management system.</b><br>Go ahead and skim through, add, delete, or update your stock!</div>
+    </div>
+    <div class="home-page-container">
+        <div class="book-list-card">
+            <a class="book-image-link" href="/books">Book list</a>
+            <img class="book-image" src="/books.jpg">
+        </div>
+        <div class="genre-list-card">
+            <a class="genre-image-link" href="/genres">Genre list</a>
+            <img class="genre-image" src="/genres.jpg">
+        </div>
+    </div>
+    <div class="post-text-container">
+        <div></div>
+    </div>
 </body>
 </html>
