@@ -9,9 +9,9 @@
 <body>
     <div class="header">
         <h2>Bookstore Inventory</h2>
-        <a href="/">Home</a>
-        <a href="/books">Books</a>
-        <a href="/categories">Categories</a>
+        <a href="../../">Home</a>
+        <a href="../">Books</a>
+        <a href="../../categories">Categories</a>
         <form>
             <label for="search">Search a book: </label>
             <input name="search" id="search" type="text">
@@ -19,7 +19,7 @@
         </form>
     </div>
     <div>Hello there!</div>
-    <form>
+    <form method="post">
         <h4>Enter a new book</h4>
         <label for="title">Title: </label>
         <input name="title">
@@ -34,6 +34,9 @@
             <option>Romance</option>
             <option>Comedy</option>
             <option>Non-Fiction</option>
+            <option>Fiction</option>
+            <option>Classics</option>
+            <option>Sci-Fi</option>
         </select>
         <button type="submit">Submit Book</button>
     </form>

@@ -5,5 +5,6 @@ const indexRouter = Router();
 indexRouter.get("/", controller.homepageGet);
 indexRouter.get("/books", controller.booksPageGet);
 indexRouter.get("/books/add", controller.addBookPageGet);
+indexRouter.post("/books/add", controller.addBookPost);
 
 module.exports = indexRouter

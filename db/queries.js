@@ -1,4 +1,5 @@
 const pool = require('./pool');
+
 // books: id, title, author, release_date, genre
 
 // Table generation functions
@@ -30,7 +31,10 @@ async function addBook(title, author, release_date, genre) {
     await pool.query("INSERT INTO books VALUES ($1, $2, $3, $4)", [title, author, release_date, genre])
 }
 
+showBooks();
+
 module.exports = {
     showBooks, 
     addBook
 }
+
