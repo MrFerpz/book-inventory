@@ -47,6 +47,10 @@ async function updateBookPost(req, res) {
     res.redirect("/books");
 }
 
+function categoryPageGet(req, res) {
+    res.render("categories")
+}
+
 module.exports = {
     homepageGet,
     booksPageGet,
@@ -54,5 +58,6 @@ module.exports = {
     addBookPost,
     deleteBookPost,
     updateBookPageGet,
-    updateBookPost
+    updateBookPost,
+    categoryPageGet
 }

@@ -43,13 +43,17 @@ async function updateBook(id, title, author, release_date, genre) {
     await pool.query("UPDATE books SET title = $2, author = $3, release_date = $4, genre = $5 WHERE id = $1", [id, title, author, release_date, genre]);
 }
 
-showBooks();
+async function genreFilter(genre) {
+    const response = await pool.query("SELECT * FROM books WHERE genre = $1", [genre])
+    return response.rows;
+}
 
 module.exports = {
     showBooks, 
     addBook,
     deleteBookById,
     findBookById,
-    updateBook
+    updateBook,
+    genreFilter
 }
 

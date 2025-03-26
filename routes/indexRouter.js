@@ -9,5 +9,6 @@ indexRouter.post("/books/add", controller.addBookPost);
 indexRouter.post("/books/delete/:id", controller.deleteBookPost);
 indexRouter.get("/books/update/:id", controller.updateBookPageGet);
 indexRouter.post("/books/update/:id", controller.updateBookPost);
+indexRouter.get("/categories", controller.categoryPageGet);
 
 module.exports = indexRouter
