@@ -54,13 +54,19 @@ async function genreFilter(genre) {
     return response.rows;
 }
 
+async function bookSearch(title) {
+    const response = await pool.query("SELECT * FROM books WHERE title LIKE $1", ["%" + title + "%"]);
+    return response.rows;
+}
+
 module.exports = {
     showBooks, 
     addBook,
     deleteBookById,
     findBookById,
     updateBook,
-    genreFilter
+    genreFilter,
+    bookSearch
 }
 
 showBooks();

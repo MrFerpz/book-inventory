@@ -11,5 +11,6 @@ indexRouter.get("/books/update/:id", controller.updateBookPageGet);
 indexRouter.post("/books/update/:id", controller.updateBookPost);
 indexRouter.get("/genres", controller.genrePageGet);
 indexRouter.get("/genres/:genre", controller.individualGenrePageGet);
+indexRouter.get("/search/*", controller.bookSearchGet);
 
 module.exports = indexRouter

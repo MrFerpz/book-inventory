@@ -58,6 +58,12 @@ async function individualGenrePageGet(req, res) {
     res.render("genrePage", {books: booksInGenre});
 }
 
+async function bookSearchGet(req, res) {
+    const searchedTitle = req.query.search;
+    const books = await db.bookSearch(searchedTitle);
+    res.render("searchResults", {books: books});
+}
+
 module.exports = {
     homepageGet,
     booksPageGet,
@@ -67,5 +73,6 @@ module.exports = {
     updateBookPageGet,
     updateBookPost,
     genrePageGet,
-    individualGenrePageGet
+    individualGenrePageGet,
+    bookSearchGet
 }
