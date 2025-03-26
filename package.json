@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "commonjs",
   "dependencies": {
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",

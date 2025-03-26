@@ -1,0 +1,37 @@
+a {
+    color: black
+}
+
+.header {
+    height: 100px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 60% 10% 10% 10% 10%;
+    background-color: lightgray;
+}
+
+.book-grid {
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 25% 25% 25%;
+}
+
+.book-card {
+    border: 1px dotted black;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.book-date {
+    font-size: 0.8rem;
+}
+
+.book-genre:hover {
+    color: purple;
+}
