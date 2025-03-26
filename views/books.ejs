@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books List</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
     <div class="header">
@@ -26,6 +26,10 @@
                     <div class="book-author"><%= book.author %></div>
                     <div class="book-date"><%= book.release_date %></div>
                     <div class="book-genre"><%= book.genre %></div>
+                    <form method="post" action="/books/delete/<%= book.id %>">
+                        <button type="submit">Delete Book</button>
+                    </form>
+                    <a href="/books/update/<%= book.id %>">Update Details</a>
                 </div>
             <% }) %>
         </div>  

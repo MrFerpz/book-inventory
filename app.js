@@ -10,7 +10,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Set public folder for static assets
-app.use(express.static('public'));
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
 
 // For parsing post submits
 app.use(express.urlencoded({ extended: true }));

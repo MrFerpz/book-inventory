@@ -19,26 +19,26 @@
         </form>
     </div>
     <div>Hello there!</div>
-    <form method="post">
-        <h4>Enter a new book</h4>
+    <form method="post" action="/books/update/<%= book.id%>">
+        <h4>Update book: "<%= book.title %>"</h4>
         <label for="title">Title: </label>
-        <input name="title">
+        <input name="title" value="<%= book.title %>">
         <label for="author">Author: </label>
-        <input name="author">
+        <input name="author" value="<%= book.author %>">
         <label for="release_date">Year of release: </label>
-        <input name="release_date" type="number" min="0" max="2025">
+        <input name="release_date" type="number" min="0" max="2025" value="<%= book.release_date %>">
         <label for="genre">Genre: </label>
-        <select name="genre">
-            <option>Thriller</option>
-            <option>Action</option>
-            <option>Romance</option>
-            <option>Comedy</option>
-            <option>Non-Fiction</option>
-            <option>Fiction</option>
-            <option>Classics</option>
-            <option>Sci-Fi</option>
+        <select name="genre" value="<%= book.genre %>">
+            <option value="Thriller">Thriller</option>
+            <option value="Action">Action</option>
+            <option value="Romance">Romance</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Classics">Classics</option>
+            <option value="Sci-Fi">Sci-Fi</option>
         </select>
-        <button type="submit">Submit Book</button>
+        <button type="submit">Update Book</button>
     </form>
 </body>
 </html>
