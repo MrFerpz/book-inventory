@@ -9,38 +9,39 @@
 <body>
     <div class="header">
         <h2>Bookstore Inventory</h2>
-        <a href="../../">Home</a>
-        <a href="../">Books</a>
-        <a href="../../categories">Categories</a>
+        <a href="/">Home</a>
+        <a href="/books">Books</a>
+        <a href="/genres">Genres</a>
         <form method="get" action="/search/">
-            <label for="search">Search a book: </label>
+            <label for="search">BOOK SEARCH</label>
             <input name="search" id="search" type="text">
             <button type="submit">Go</button>
         </form>
     </div>
-    <div>Hello there!</div>
-    <form method="post" action="/books/update/<%= book.id%>">
-        <h4>Update book: "<%= book.title %>"</h4>
-        <label for="title">Title: </label>
-        <input name="title" value="<%= book.title %>">
-        <label for="author">Author: </label>
-        <input name="author" value="<%= book.author %>">
-        <label for="release_date">Year of release: </label>
-        <input name="release_date" type="number" min="0" max="2025" value="<%= book.release_date %>">
-        <label for="genre">Genre: </label>
-        <select name="genre" value="<%= book.genre %>">
-            <option value="Thriller">Thriller</option>
-            <option value="Action">Action</option>
-            <option value="Romance">Romance</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Non-Fiction">Non-Fiction</option>
-            <option value="Fiction">Fiction</option>
-            <option value="Classics">Classics</option>
-            <option value="Sci-Fi">Sci-Fi</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Horror">Horror</option>
-        </select>
-        <button type="submit">Update Book</button>
-    </form>
+    <div class="update-form-container">
+        <form class="update-form" method="post" action="/books/update/<%= book.id%>">
+            <h4>Update book "<%= book.title %>"</h4>
+            <label for="title">Title</label>
+            <input name="title" value="<%= book.title %>"><br>
+            <label for="author">Author</label>
+            <input name="author" value="<%= book.author %>"><br>
+            <label for="release_date">Year of release</label>
+            <input name="release_date" type="number" min="0" max="2025" value="<%= book.release_date %>"><br>
+            <label for="genre">Genre</label>
+            <select name="genre" value="<%= book.genre %>">
+                <option value="Thriller">Thriller</option>
+                <option value="Action">Action</option>
+                <option value="Romance">Romance</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Classics">Classics</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Horror">Horror</option>
+            </select><br><br>
+            <button class="book-update-btn" type="submit">Update Book</button>
+        </form>
+    </div>
 </body>
 </html>

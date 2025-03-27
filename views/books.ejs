@@ -23,18 +23,23 @@
         <div class="book-grid">
             <% books.map((book) => { %>
                 <div class="book-card">
-                    <div class="book-title"><%= book.title %></div>
-                    <div class="book-author"><%= book.author %></div>
-                    <div class="book-date"><%= book.release_date %></div>
-                    <div class="book-genre"><%= book.genre %></div>
-                    <form method="post" action="/books/delete/<%= book.id %>">
-                        <button type="submit">Delete Book</button>
-                    </form>
-                    <a href="/books/update/<%= book.id %>">Update Details</a>
+                    <img class="card-image" src="/book.jpg">
+                    <div class="card-text-container">
+                        <div class="book-title"><%= book.title %></div>
+                        <div class="book-author"><%= book.author %></div>
+                        <div class="book-date"><%= book.release_date %></div>
+                        <div class="book-genre"><%= book.genre %></div>
+                        <form method="post" action="/books/delete/<%= book.id %>">
+                            <button class="delete-book-btn" type="submit">Delete Book</button>
+                        </form>
+                    </div>
+                    <div class="black-line"></div>
+                    <a class="update-book-btn" href="/books/update/<%= book.id %>">Update Details</a>
                 </div>
             <% }) %>
         </div>  
     </div>
-    <a href="/books/add">Add a new book</a>
+    <div class="separator"></div>
+    <div class="book-add-container"><a class="book-add-btn" href="/books/add">Add a new book</a></div>
 </body>
 </html>

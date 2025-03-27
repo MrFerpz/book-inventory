@@ -41,7 +41,7 @@ body {
     width: 90vw;
     display: grid;
     gap: 20px;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20%;
 }
 
 .book-card {
@@ -50,21 +50,12 @@ body {
     flex-direction: column;
     background-color: white;
     text-align: center;
-    padding: 10px;
     box-shadow: 4px 4px;
 }
 
 .book-title {
     font-size: 1.2rem;
     font-weight: bolder;
-}
-
-.book-date {
-    font-size: 0.8rem;
-}
-
-.book-genre:hover {
-    color: purple;
 }
 
 .categories-grid {
@@ -74,6 +65,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.black-line {
+    height: 1px;
+    width: 100%;
+    background-color: black;
 }
 
 .categories-card {
@@ -161,4 +158,90 @@ body {
 
 .search-form {
     display: inline-block;
+}
+.update-form {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 4px 4px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+h4 {
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+    color: rgb(21, 0, 128);
+}
+
+.update-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.book-update-btn {
+    text-align: center;
+}
+
+.update-form > input {
+    width: 100%;
+    margin: 3px 0 3px 0;
+    height: 1.2rem;
+}
+
+.update-form > select {
+    width: 100%;
+    height: 1.2rem;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-text-container {
+    padding: 10px;
+}
+
+.book-add-container {
+    display: flex;
+    justify-content: center;
+}
+
+.book-add-btn {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 4px 4px;
+    color: black;
+}
+
+.book-genre, .book-date, .book-author {
+    font-size: 0.8rem;
+    padding: 2px;
+}
+
+.delete-book-btn {
+    margin-top: 5px;
+}
+
+.update-book-btn {
+    padding: 10px;
+}
+
+.no-results-container {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid black;
+    box-shadow: 4px 4px;
+}
+
+.no-results-flexbox {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
 }

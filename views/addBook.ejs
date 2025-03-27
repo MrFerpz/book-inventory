@@ -18,29 +18,31 @@
             <button type="submit">Go</button>
         </form>
     </div>
-    <div>Hello there!</div>
-    <form method="post">
-        <h4>Enter a new book</h4>
-        <label for="title">Title: </label>
-        <input name="title">
-        <label for="author">Author: </label>
-        <input name="author">
-        <label for="release_date">Year of release: </label>
-        <input name="release_date" type="number" min="0" max="2025">
-        <label for="genre">Genre: </label>
-        <select name="genre">
-            <option>Thriller</option>
-            <option>Action</option>
-            <option>Romance</option>
-            <option>Comedy</option>
-            <option>Non-Fiction</option>
-            <option>Fiction</option>
-            <option>Classics</option>
-            <option>Sci-Fi</option>
-            <option>Adventure</option>
-            <option>Horror</option>
-        </select>
-        <button type="submit">Submit Book</button>
-    </form>
+    <div class="update-form-container">
+        <form method="post" class="update-form">
+            <h4>Enter a new book</h4>
+            <label for="title">Title</label>
+            <input name="title">
+            <label for="author">Author</label>
+            <input name="author">
+            <label for="release_date">Year of release</label>
+            <input name="release_date" type="number" min="0" max="2025">
+            <label for="genre">Genre: </label>
+            <select name="genre">
+                <option>Thriller</option>
+                <option>Action</option>
+                <option>Romance</option>
+                <option>Comedy</option>
+                <option>Non-Fiction</option>
+                <option>Fiction</option>
+                <option>Classics</option>
+                <option>Sci-Fi</option>
+                <option>Adventure</option>
+                <option>Horror</option>
+            </select>
+            <br><br>
+            <button type="submit">Submit Book</button>
+        </form>
+    </div>
 </body>
 </html>
